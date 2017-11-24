@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "AlertManager"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "Helps create new Alert Controller for the better development."
   s.homepage     = "http://codeyard.eu"
   s.license      = {type: "MIT", text: "DO NOT COPY!"}
