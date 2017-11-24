@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		50F38CCD1FC8B20D00838CB4 /* AlertManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F38CC31FC8B20D00838CB4 /* AlertManager.framework */; };
 		50F38CD21FC8B20D00838CB4 /* AlertManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F38CD11FC8B20D00838CB4 /* AlertManagerTests.swift */; };
-		50F38CD41FC8B20D00838CB4 /* AlertManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 50F38CC61FC8B20D00838CB4 /* AlertManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50F38CEE1FC8CF5800838CB4 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F38CEC1FC8CF5800838CB4 /* Alert.swift */; };
+		50F38CEF1FC8CF5800838CB4 /* AlertOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F38CED1FC8CF5800838CB4 /* AlertOption.swift */; };
+		50F38CF21FC8CF6000838CB4 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F38CF11FC8CF6000838CB4 /* Alertable.swift */; };
+		50F38CF41FC8CF6900838CB4 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F38CF31FC8CF6800838CB4 /* AlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +27,14 @@
 
 /* Begin PBXFileReference section */
 		50F38CC31FC8B20D00838CB4 /* AlertManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlertManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		50F38CC61FC8B20D00838CB4 /* AlertManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertManager.h; sourceTree = "<group>"; };
 		50F38CC71FC8B20D00838CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50F38CCC1FC8B20D00838CB4 /* AlertManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F38CD11FC8B20D00838CB4 /* AlertManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManagerTests.swift; sourceTree = "<group>"; };
 		50F38CD31FC8B20D00838CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50F38CEC1FC8CF5800838CB4 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		50F38CED1FC8CF5800838CB4 /* AlertOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertOption.swift; sourceTree = "<group>"; };
+		50F38CF11FC8CF6000838CB4 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		50F38CF31FC8CF6800838CB4 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +77,9 @@
 		50F38CC51FC8B20D00838CB4 /* AlertManager */ = {
 			isa = PBXGroup;
 			children = (
-				50F38CC61FC8B20D00838CB4 /* AlertManager.h */,
+				50F38CF01FC8CF6000838CB4 /* Protocols */,
+				50F38CEB1FC8CF5800838CB4 /* Models */,
+				50F38CF31FC8CF6800838CB4 /* AlertManager.swift */,
 				50F38CC71FC8B20D00838CB4 /* Info.plist */,
 			);
 			path = AlertManager;
@@ -86,6 +94,23 @@
 			path = AlertManagerTests;
 			sourceTree = "<group>";
 		};
+		50F38CEB1FC8CF5800838CB4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50F38CEC1FC8CF5800838CB4 /* Alert.swift */,
+				50F38CED1FC8CF5800838CB4 /* AlertOption.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		50F38CF01FC8CF6000838CB4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				50F38CF11FC8CF6000838CB4 /* Alertable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,7 +118,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50F38CD41FC8B20D00838CB4 /* AlertManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50F38CF41FC8CF6900838CB4 /* AlertManager.swift in Sources */,
+				50F38CF21FC8CF6000838CB4 /* Alertable.swift in Sources */,
+				50F38CEE1FC8CF5800838CB4 /* Alert.swift in Sources */,
+				50F38CEF1FC8CF5800838CB4 /* AlertOption.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +404,7 @@
 		50F38CDB1FC8B20D00838CB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CSD326H7VF;
 				INFOPLIST_FILE = AlertManagerTests/Info.plist;
@@ -390,6 +419,7 @@
 		50F38CDC1FC8B20D00838CB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CSD326H7VF;
 				INFOPLIST_FILE = AlertManagerTests/Info.plist;
