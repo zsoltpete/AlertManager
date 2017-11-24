@@ -14,7 +14,7 @@ public class Alert {
     var message: String
     var actions: [AlertOption]
     
-    init(title: String = "", message: String = "", actions: [AlertOption]) {
+    public init(title: String = "", message: String = "", actions: [AlertOption]) {
         self.title = title
         self.message = message
         self.actions = actions
