@@ -77,9 +77,10 @@
 		50F38CC51FC8B20D00838CB4 /* AlertManager */ = {
 			isa = PBXGroup;
 			children = (
-				50F38CF01FC8CF6000838CB4 /* Protocols */,
-				50F38CEB1FC8CF5800838CB4 /* Models */,
 				50F38CF31FC8CF6800838CB4 /* AlertManager.swift */,
+				50F38CEC1FC8CF5800838CB4 /* Alert.swift */,
+				50F38CED1FC8CF5800838CB4 /* AlertOption.swift */,
+				50F38CF11FC8CF6000838CB4 /* Alertable.swift */,
 				50F38CC71FC8B20D00838CB4 /* Info.plist */,
 			);
 			path = AlertManager;
@@ -92,23 +93,6 @@
 				50F38CD31FC8B20D00838CB4 /* Info.plist */,
 			);
 			path = AlertManagerTests;
-			sourceTree = "<group>";
-		};
-		50F38CEB1FC8CF5800838CB4 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				50F38CEC1FC8CF5800838CB4 /* Alert.swift */,
-				50F38CED1FC8CF5800838CB4 /* AlertOption.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		50F38CF01FC8CF6000838CB4 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				50F38CF11FC8CF6000838CB4 /* Alertable.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
