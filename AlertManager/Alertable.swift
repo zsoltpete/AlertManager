@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol Alertable {
+public protocol Alertable {
     
     func present(_ alert: Alert)
     func style(alertController: UIAlertController)
