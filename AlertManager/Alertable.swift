@@ -17,7 +17,7 @@ public protocol Alertable {
 
 extension Alertable where Self: UIViewController{
     
-    func present(_ alert: Alert){
+    public func present(_ alert: Alert){
         let alertController = AlertManager.shared.createPopUp(alert: alert)
         style(alertController: alertController)
         self.present(alertController, animated: true, completion: nil)
