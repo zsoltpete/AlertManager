@@ -8,11 +8,19 @@
 
 import Foundation
 
+/**
+ Class for alert controller buttons handling. Set up title and action.
+ */
 public class AlertOption {
     
+    /// The alert controller button title
     var title: String
+    /// The action of the alert controller's button
     var action: (() -> Void)?
     
+    /*
+     * Create an object with title and action to the alert controller button
+     */
     public init(title: String = "", action: (() -> Void)?) {
         self.title = title
         self.action = action

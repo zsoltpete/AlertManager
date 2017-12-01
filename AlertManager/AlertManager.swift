@@ -9,13 +9,20 @@
 import Foundation
 import UIKit
 
+/**
+ * Manage easily alert controllers.
+ */
 public class AlertManager{
     
     static var shared = AlertManager()
     
     private init(){
     }
-    
+    /*
+     * Crete an alert controller with an *Alert*
+     * - parameter alert: Object what show the aler alert controller
+     * return: Returns a alert controller with the specific *Alert*
+     */
     public func createPopUp(alert: Alert) -> UIAlertController{
         let alertViewController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: .alert)
         alert.actions.forEach { (option) in
